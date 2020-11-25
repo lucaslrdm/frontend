@@ -38,7 +38,7 @@ function gravar() {
                     }
                 }
 
-                fetch("https://backend-projetofinal1.herokuapp.com:8080/novoagendamento", cabecalho)
+                fetch("https://backend-projetofinal1.herokuapp.com/novoagendamento", cabecalho)
                     .then(res => res.json())
                     .then(res => { window.alert("Gravado com sucesso") })
                     .catch(err => { window.alert("ocorreu um erro") });
@@ -75,7 +75,7 @@ function preencheragencias(lista) {
 }
 
 function carregaragencias() {
-    fetch("https://backend-projetofinal1.herokuapp.com:8080/agencia")
+    fetch("https://backend-projetofinal1.herokuapp.com/agencia")
         .then(res => res.json())
         .then(res => preencheragencias(res));
 }

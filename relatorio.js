@@ -86,7 +86,7 @@ function filtrar(){
           }
       }
 
-      fetch("http://localhost:8080/" + rota , cabecalho)
+      fetch("https://backend-projetofinal1.herokuapp.com:8080/" + rota , cabecalho)
       .then(res=> res.json())
       .then(res => montartabela(res))
       .catch(err => {window.alert("Sem agendamentos")});   
@@ -108,7 +108,7 @@ function preencheragencias(lista) {
 }
 
 function carregaragencias() {
-    fetch("http://localhost:8080/agencia")
+    fetch("https://backend-projetofinal1.herokuapp.com:8080/agencia")
         .then(res => res.json())
         .then(res => preencheragencias(res));
 }
@@ -124,7 +124,7 @@ function preencherclientes(lista) {
 }
 
 function carregarclientes() {
-    fetch("http://localhost:8080/clientes")
+    fetch("https://backend-projetofinal1.herokuapp.com:8080/clientes")
         .then(res => res.json())
         .then(res => preencherclientes(res));
 }

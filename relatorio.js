@@ -14,7 +14,7 @@ function carregardados() {
         document.getElementById("foto").innerHTML =
             "<img  alt='Foto não encontrada'src=imagens/" + usuariojson.foto + ">";
         document.getElementById("dados").innerHTML =
-            "<h3>" + usuariojson.nome + "<br>" + usuariojson.email + "<br></h3>" +
+            "<h3>" + usuariojson.nome + "<br>" + usuariojson.email + "<br></h3><br><br><br>" +
             "<button type='button' class='btn btn-outline-danger' onclick='logout()''>Logout</button>";
     }
 }

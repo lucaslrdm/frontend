@@ -12,7 +12,7 @@ function carregardados() {
         carregarclientes();
         var usuariojson = JSON.parse(usuariologado);
         document.getElementById("foto").innerHTML =
-            "<img  alt='Foto não encontrada'src=imagens/" + usuariojson.foto + ">";
+            "<img  alt='Foto não encontrada'src='imagens\'" + usuariojson.foto + ">";
         document.getElementById("dados").innerHTML =
             "<h3>" + usuariojson.nome + "<br>" + usuariojson.email + "<br></h3>"
     }

@@ -100,3 +100,30 @@ function comparahorario(horarioinicio, horariofim){
     
 
 }
+
+function validaaegendamento() {
+    var data = document.getElementById("dateagenda").value;
+                var ano = data.substring(0, 4);
+                var mes = data.substring(5, 7);
+                var dia = data.substring(8, 10);
+
+                var databrasil = dia + "/" + mes + "/" + ano
+                
+                var objeto = {
+                    dataagendamento: databrasil,
+                    horaagendamento: document.getElementById("timehorainicio").value,
+                }
+
+                var cabecalho = {
+                    method: "POST",
+                    body: JSON.stringify(objeto),
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                }
+
+                fetch("https://backend-projetofinal1.herokuapp.com/validaagendamento", cabecalho)
+                    .then(res => res.json())
+                    .then(res => gravar())
+                    .catch(err => { window.alert("Horário lotado, por favor escolha um diferente") });
+}

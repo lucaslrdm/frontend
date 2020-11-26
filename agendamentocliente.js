@@ -112,6 +112,10 @@ function validaaegendamento() {
                 var objeto = {
                     dataagendamento: databrasil,
                     horaagendamento: document.getElementById("timehorainicio").value,
+                    agencia: {
+                        id: document.getElementById("inputAg").value
+
+                    }
                 }
 
                 var cabecalho = {
@@ -125,5 +129,9 @@ function validaaegendamento() {
                 fetch("https://backend-projetofinal1.herokuapp.com/validaagendamento", cabecalho)
                     .then(res => res.json())
                     .then(res => gravar())
-                    .catch(err => { window.alert("Horário lotado, por favor escolha um diferente") });
+                    .catch(err => { 
+                        document.getElementById("alertdata").innerHTML = 
+                        "<div class='alert alert-danger' role='alert'> Horário lotado, por favor escolha um diferente </div>";
+                        document.getElementById("timehorainicio").focus();
+                    });
 }

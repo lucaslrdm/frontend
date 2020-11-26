@@ -41,8 +41,10 @@ function gravar() {
                 fetch("https://backend-projetofinal1.herokuapp.com/novoagendamento", cabecalho)
                     .then(res => res.json())
                     .then(res => { 
-                        window.alert("Gravado com sucesso");
-                        window.location = "agendamentocliente.html";
+                        document.getElementById("alertdata").innerHTML = 
+                        "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>";
+                        document.getElementById("nomecli").value = "";
+                        //window.location = "agendamentocliente.html";
                     })
                     .catch(err => { window.alert("ocorreu um erro") });
 

@@ -1,4 +1,8 @@
 
+form{
+    border-radius: 25px;
+    border: 1;
+}
 a{
     font-size: 14px;
     font-family: Verdana;

@@ -42,8 +42,8 @@ function gravar() {
                     .then(res => res.json())
                     .then(res => { 
                         document.getElementById("alertdata").innerHTML = 
-                        "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>";
-                        window.location.reload();
+                        "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>"
+                        window.location.reload()
                     })
                     .catch(err => { 
                         document.getElementById("alertdata").innerHTML = 

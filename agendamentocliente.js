@@ -43,8 +43,8 @@ function gravar() {
                     .then(res => { 
                         document.getElementById("alertdata").innerHTML = 
                         "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>"
-                        sleep(2000);
-                        window.location.reload(true)
+                        
+                        window.location.reload(true);
                     })
                     .catch(err => { 
                         document.getElementById("alertdata").innerHTML = 

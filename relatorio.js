@@ -71,7 +71,7 @@ function filtrar(){
         document.getElementById("chkdata").checked==false
         )
         {
-            fetch("https://backend-projetofinal1.herokuapp.com/agendamentos")
+            fetch("https://projeto-java-final.herokuapp.com/agendamentos")
             .then(res => res.json())
             .then(res => montartabela(res))
             .catch(err => {window.alert("Sem agendamentos")});
@@ -110,7 +110,7 @@ function filtrar(){
           }
       }
 
-      fetch("https://backend-projetofinal1.herokuapp.com/" + rota , cabecalho)
+      fetch("https://projeto-java-final.herokuapp.com/" + rota , cabecalho)
       .then(res=> res.json())
       .then(res => montartabela(res))
       .catch(err => {window.alert("Sem agendamentos")});   
@@ -132,7 +132,7 @@ function preencheragencias(lista) {
 }
 
 function carregaragencias() {
-    fetch("https://backend-projetofinal1.herokuapp.com/agencia")
+    fetch("https://projeto-java-final.herokuapp.com/agencia")
         .then(res => res.json())
         .then(res => preencheragencias(res));
 }
@@ -148,7 +148,7 @@ function preencherclientes(lista) {
 }
 
 function carregarclientes() {
-    fetch("https://backend-projetofinal1.herokuapp.com/clientes")
+    fetch("https://projeto-java-final.herokuapp.com/clientes")
         .then(res => res.json())
         .then(res => preencherclientes(res));
 }
@@ -162,7 +162,7 @@ function filtrarCSV(){
         document.getElementById("chkdata").checked==false
         )
         {
-            fetch("https://backend-projetofinal1.herokuapp.com/agendamentos")
+            fetch("https://projeto-java-final.herokuapp.com/agendamentos")
             .then(res => res.json())
             .then(res => montartabela(res))
             .catch(err => {window.alert("Sem agendamentos")});
@@ -201,7 +201,7 @@ function filtrarCSV(){
           }
       }
 
-      fetch("https://backend-projetofinal1.herokuapp.com/" + rota , cabecalho)
+      fetch("https://projeto-java-final.herokuapp.com/" + rota , cabecalho)
       .then(res=> res.json())
       .then(res => montarcsv(res))
       .catch(err => {window.alert("Sem agendamentos")});   

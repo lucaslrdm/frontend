@@ -43,13 +43,8 @@ function gravar() {
                     .then(res => { 
                         document.getElementById("alertdata").innerHTML = 
                         "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>";
-                        document.getElementById("nomecli").value = "";
-                        document.getElementById("emailcli").value = "";
-                        document.getElementById("celcli").value = "";
-                        document.getElementById("dateagenda").value = "";
-                        document.getElementById("timehorainicio").value = "";
-
-                        //window.location = "agendamentocliente.html";
+                        await delay(3000);
+                        window.location = "agendamentocliente.html";
                     })
                     .catch(err => { 
                         document.getElementById("alertdata").innerHTML = 

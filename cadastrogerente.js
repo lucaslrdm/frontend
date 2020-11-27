@@ -37,7 +37,7 @@ function gravar() {
                 "<div class='alert alert-danger' role='alert'> as senhas não são iguais </div>";
                 document.getElementById("txtsenha").focus();
             }
-        
+       
         
 
     } else {

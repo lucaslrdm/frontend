@@ -90,7 +90,7 @@ function preencheragencias(lista) {
 }
 
 function carregaragencias() {
-    fetch("https://backend-projetofinal1.herokuapp.com/agencia")
+    fetch("https://projeto-java-final.herokuapp.com/agencia")
         .then(res => res.json())
         .then(res => preencheragencias(res));
 }
@@ -138,7 +138,7 @@ function validaaegendamento() {
                     }
                 }
 
-                fetch("https://backend-projetofinal1.herokuapp.com/validaagendamento", cabecalho)
+                fetch("https://projeto-java-final.herokuapp.com/validaagendamento", cabecalho)
                     .then(res => res.json())
                     .then(res => gravar())
                     .catch(err => { 

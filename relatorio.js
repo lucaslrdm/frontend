@@ -42,12 +42,14 @@ function montartabela(lista){
 }
 
 function montarcsv(lista){
-    var csv = 'agencia, nome_do_cliente, email_cliente\n';
+    var csv = 'agencia, nome_do_cliente, email_cliente, data_agendamento, hora_agendamento\n';
  
     lista.forEach(function(row) {
             csv += row.agencia.nomeAgencia;
             csv += ','+ row.nomecli;
             csv += ','+ row.emailcli;
+            csv += ','+ row.dataagendamento;
+            csv += ','+ row.horaagendamento;
             csv += '\n';
     });
   

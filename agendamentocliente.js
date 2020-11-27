@@ -39,7 +39,7 @@ function gravar() {
                     }
                 }
 
-                fetch("https://backend-projetofinal1.herokuapp.com/novoagendamento", cabecalho)
+                fetch("https://front-end-java-itau.herokuapp.com/novoagendamento", cabecalho)
                     .then(res => res.json())
                     .then(res => { 
                         document.getElementById("alertdata").innerHTML = 

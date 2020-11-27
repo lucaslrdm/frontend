@@ -41,9 +41,9 @@ function gravar() {
                 fetch("https://backend-projetofinal1.herokuapp.com/novoagendamento", cabecalho)
                     .then(res => res.json())
                     .then(res => { 
-                        //document.getElementById("alertdata").innerHTML = 
-                        //"<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>"
-                        window.alert("deu certo");
+                        document.getElementById("alertdata").innerHTML = 
+                        "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>"
+                        sleep(2000);
                         window.location.reload(true)
                     })
                     .catch(err => { 

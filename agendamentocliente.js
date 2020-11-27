@@ -66,6 +66,8 @@ function gravar() {
             document.getElementById("inputAg").focus();
 
         }
+    } else {
+        window.alert("email incorreto");
     }
 
     } else {

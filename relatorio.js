@@ -51,7 +51,10 @@ function filtrar(){
         document.getElementById("chkdata").checked==false
         )
         {
-        window.alert("Escolha uma opção de filtro!")
+            fetch("https://backend-projetofinal1.herokuapp.com/agendamentos")
+            .then(res => res.json())
+            .then(res => montartabela(res))
+            .catch(err => {window.alert("Sem agendamentos")});
     }else {
         var rota = "relatoriopor";
         if(document.getElementById("chkagencia").checked==true){

@@ -44,9 +44,18 @@ function gravar() {
                         document.getElementById("alertdata").innerHTML = 
                         "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>";
                         document.getElementById("nomecli").value = "";
+                        document.getElementById("emailcli").value = "";
+                        document.getElementById("celcli").value = "";
+                        document.getElementById("dateagenda").value = "";
+                        document.getElementById("timehorainicio").value = "";
+
                         //window.location = "agendamentocliente.html";
                     })
-                    .catch(err => { window.alert("ocorreu um erro") });
+                    .catch(err => { 
+                        document.getElementById("alertdata").innerHTML = 
+                        "<div class='alert alert-danger' role='alert'> Serviço indisponível no momento, tente mais tarde </div>";
+                        //window.alert("ocorreu um erro") 
+                    });
 
             } else {
                 document.getElementById("alertdata").innerHTML =

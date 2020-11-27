@@ -43,7 +43,6 @@ function gravar() {
                     .then(res => { 
                         document.getElementById("alertdata").innerHTML = 
                         "<div class='alert alert-success' role='alert'> Agendamento realizado com sucesso! </div>";
-                        await delay(3000);
                         window.location = "agendamentocliente.html";
                     })
                     .catch(err => { 

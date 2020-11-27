@@ -67,7 +67,9 @@ function gravar() {
 
         }
     } else {
-        window.alert("email incorreto");
+        document.getElementById("alertdata").innerHTML =
+                "<div class='alert alert-danger' role='alert'> Coloque um email válido! </div>";
+            document.getElementById("emailcli").focus();
     }
 
     } else {

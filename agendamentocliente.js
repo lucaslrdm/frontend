@@ -3,6 +3,7 @@ function gravar() {
     if (document.getElementById("nomecli").value.length > 0 
         && document.getElementById("emailcli").value.length > 0 
         && document.getElementById("celcli").value.length > 0) {
+        if(document.getElementById("emailcli").value.indexOf('@')>0){
 
         if (document.getElementById("inputAg").value > 0) {
 
@@ -65,6 +66,7 @@ function gravar() {
             document.getElementById("inputAg").focus();
 
         }
+    }
 
     } else {
         document.getElementById("alertdata").innerHTML =
